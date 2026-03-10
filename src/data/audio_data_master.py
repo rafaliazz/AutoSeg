@@ -5,17 +5,24 @@ from pydub import AudioSegment, silence
 
 class AudioTrackObject:
     def __init__(self, audio_path):
+        """
+        Class constructor, gives the object the needed audio path and automatically performs required segmentation. 
+        """
         self.audio_path = audio_path
         self.silent_segments, self.non_silent_segments = self.get_silent_non_silent_segs()
     
     def get_silent_non_silent_segs(self):
+        """
+        Perform silent/non-silent segmentation. 
+        """
         myaudio = AudioSegment.from_wav(self.audio_path) 
-
+        # Perform silent segmentation 
         dBFS = myaudio.dBFS
         silent_segments = silence.detect_silence(myaudio, min_silence_len=300, silence_thresh=dBFS-16)
 
         silent_segments = [((start/1000),(stop/1000)) for start,stop in silent_segments]
 
+        # Here we just assume the portions of the audio that isn't segmented when doing silent segmentation are non-silent. 
         non_silent_segments = []
 
         for i in range(len(silent_segments) - 1):

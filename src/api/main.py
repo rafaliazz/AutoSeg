@@ -19,7 +19,6 @@ async def lifespan(app: FastAPI):
     """
     Loads model once 
     """
-
     app.state.whisper_model = FasterWhisper(
         model_size="small",
         device="cpu",
@@ -33,11 +32,12 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
-
 @app.get("/")
 def root():
+    """
+    Simple health check
+    """
     return {"message": "AutoSeg API running"}
-
 
 @app.post("/transcribe")
 async def transcribe(
