@@ -117,6 +117,7 @@ The system follows a layered architecture:
 
 ### User Processing Pipeline
 <img width="728" height="3008" alt="image" src="https://github.com/user-attachments/assets/0a454581-89f9-4291-8a75-5f03ac327577" />
+
 ### Processing Pipeline Explanation
 
 The system processes audio through a multi-stage pipeline designed to improve transcription accuracy and efficiency.
