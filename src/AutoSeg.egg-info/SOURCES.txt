@@ -1,0 +1,6 @@
+README.md
+setup.py
+src/AutoSeg.egg-info/PKG-INFO
+src/AutoSeg.egg-info/SOURCES.txt
+src/AutoSeg.egg-info/dependency_links.txt
+src/AutoSeg.egg-info/top_level.txt
