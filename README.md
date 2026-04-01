@@ -1,5 +1,5 @@
 # AutoSeg 
-Repository for AutoSeg, made as part of the tahe home coding technical test for a company. 
+Repository for AutoSeg, made as part of the take home coding technical test for a company. 
 
 ## Dataset 
 Dataset used to test is taken from a sample of [Fisher English Training Speech](https://catalog.ldc.upenn.edu/LDC2004S13)
